@@ -38,7 +38,7 @@ public class PlayerTrap : MonoBehaviour
             playerAudio.PlayOneShot(trapSound);
 
 
-            // Play trap particle effect if set
+            // Play trap particle effect
             ParticleSystem effect = Instantiate(trapEffect, other.transform.position, Quaternion.identity, other.transform);
              Destroy(effect.gameObject, 1f);
         
