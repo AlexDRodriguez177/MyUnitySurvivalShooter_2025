@@ -19,8 +19,6 @@ public class PickupDropper : MonoBehaviour
         int randomIndex = Random.Range(0, pickups.Length);
         GameObject selectedPickup = pickups[randomIndex];
 
-         Vector3 spawnPosition = pickupSpawnPoint.position;
-
         Instantiate(selectedPickup, position, Quaternion.identity);
     }
 }
