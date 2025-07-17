@@ -10,10 +10,10 @@ public class EnemyHealth : MonoBehaviour
     public int scoreValue = 10;
     public AudioClip deathClip;
 
-    Animator anim;
-    AudioSource enemyAudio;
-    ParticleSystem hitParticles;
-    CapsuleCollider capsuleCollider;
+    private Animator anim;
+    private AudioSource enemyAudio;
+    private ParticleSystem hitParticles;
+    private CapsuleCollider capsuleCollider;
     bool isDead;
     bool isSinking;
 
