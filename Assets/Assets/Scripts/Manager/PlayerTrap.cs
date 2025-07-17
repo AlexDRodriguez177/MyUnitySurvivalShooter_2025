@@ -30,7 +30,7 @@ public class PlayerTrap : MonoBehaviour
             // Deal damage
             playerHealth.TakeDamage(damageAmount);
 
-        // gets gun audio source
+        // Gets audio socurce from player
         AudioSource playerAudio = playerHealth.GetComponentInChildren<AudioSource>();
         
         
