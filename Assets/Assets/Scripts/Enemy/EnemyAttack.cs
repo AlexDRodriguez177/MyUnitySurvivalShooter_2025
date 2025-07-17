@@ -5,21 +5,33 @@ public class EnemyAttack : MonoBehaviour
     public float timeBetweenAttacks = .5f;
     public int attackDamage = 10;
 
-    Animator anim;
-    GameObject player;
-    PlayerHealth playerHealth;
-    EnemyHealth enemyHealth;
-    bool playerInRange;
-    float timer;
+    private Animator anim;
+    private GameObject player;
+    private PlayerHealth playerHealth;
+    private EnemyHealth enemyHealth;
+    private bool playerInRange;
+    private float timer;
 
 
-    private void Awake()
+    private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerHealth = player.GetComponent<PlayerHealth>();
+        
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent<Animator>(); 
     }
+
+    /// <summary>
+    /// The EnemyManagerReference method is used to set the player reference
+    /// It initializes the playerHealth component from the player GameObject
+    /// Bypassing the start method which would call for the Player reference too early
+    /// </summary>
+    public void EnemyManagerReference(GameObject playerReference)
+    {
+        player= playerReference;
+        playerHealth = player.GetComponent<PlayerHealth>();
+    }
+
+
 
     private void OnTriggerEnter(Collider other)
     {

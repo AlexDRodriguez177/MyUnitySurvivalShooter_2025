@@ -3846,6 +3846,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1167559461143212079, guid: dfc61f3f321924846b6cdb4af28eff92, type: 3}
+      propertyPath: Floor
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167559461143212079, guid: dfc61f3f321924846b6cdb4af28eff92, type: 3}
+      propertyPath: floor
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167559461143212079, guid: dfc61f3f321924846b6cdb4af28eff92, type: 3}
       propertyPath: sprintClip
       value: 
       objectReference: {fileID: 8300000, guid: c91fcf414acc0344cb03b13996f1bf3b, type: 3}
@@ -3858,9 +3866,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 709874494}
     - target: {fileID: 1167559461143212079, guid: dfc61f3f321924846b6cdb4af28eff92, type: 3}
+      propertyPath: walkingBool
+      value: IsWalking
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167559461143212079, guid: dfc61f3f321924846b6cdb4af28eff92, type: 3}
       propertyPath: staminaSlider
       value: 
       objectReference: {fileID: 220518938}
+    - target: {fileID: 1167559461143212079, guid: dfc61f3f321924846b6cdb4af28eff92, type: 3}
+      propertyPath: verticalInput
+      value: Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167559461143212079, guid: dfc61f3f321924846b6cdb4af28eff92, type: 3}
+      propertyPath: horizontalInput
+      value: Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167559461143212079, guid: dfc61f3f321924846b6cdb4af28eff92, type: 3}
+      propertyPath: walkingAnimatorBool
+      value: IsWalking
+      objectReference: {fileID: 0}
     - target: {fileID: 5770636370024355253, guid: dfc61f3f321924846b6cdb4af28eff92, type: 3}
       propertyPath: m_Name
       value: Player

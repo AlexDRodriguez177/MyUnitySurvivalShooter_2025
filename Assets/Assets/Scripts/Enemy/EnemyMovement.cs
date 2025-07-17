@@ -3,17 +3,30 @@ using UnityEngine.AI;
 
 public class EnemyMovment : MonoBehaviour
 {
-    Transform player;
-    PlayerHealth playerHealth;
-    EnemyHealth enemyHealth;
-    NavMeshAgent nav;
+    public Transform player;
+    private PlayerHealth playerHealth;
+    private EnemyHealth enemyHealth;
+    private NavMeshAgent nav;
+    
 
-    private void Awake()
+    private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerHealth = player.GetComponent<PlayerHealth>();
+        
+        
         enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<NavMeshAgent>();
+    }
+
+    /// <summary>
+    /// The enemyManagerReference method is used to set the player reference
+    /// Bypassing the start method which would call for the Player reference too early
+    /// reference to the PlayerHealth component from the player Transform
+    /// </summary>
+
+    public void EnemyManagerReference(Transform targetPlayer)
+    {
+        player = targetPlayer;
+        playerHealth = player.GetComponent<PlayerHealth>();
     }
 
     private void Update()
