@@ -5,13 +5,17 @@ public class EnemyManager : MonoBehaviour
 
     public PlayerHealth playerHealth;
     public GameObject enemy;
-    public GameObject player;
+    public static GameObject player;
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
 
     void Start()
     {
-        player= GameObject.FindGameObjectWithTag("Player");
+        if(player==null)
+        {
+         player= GameObject.FindGameObjectWithTag("Player");
+        }
+        
         InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
